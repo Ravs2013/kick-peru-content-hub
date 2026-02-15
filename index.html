@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kick Peru Content Hub — Automatización de Contenido</title>
-    <meta name="description" content="Plataforma de automatización de contenido para los mejores streamers de Kick Perú. Distribución automática a YouTube, TikTok, Instagram y Facebook.">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <meta name="description"
+        content="Plataforma de automatización de contenido para los mejores streamers de Kick Perú. Distribución automática a YouTube, TikTok, Instagram y Facebook.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&family=Bebas+Neue&display=swap"
+        rel="stylesheet">
     <style>
         :root {
             --bg: #0a0a0f;
@@ -17,13 +20,20 @@
             --text: #e0e0e0;
             --muted: #8a8a9a;
         }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             font-family: 'Inter', sans-serif;
             background: var(--bg);
             color: var(--text);
             min-height: 100vh;
         }
+
         .hero {
             text-align: center;
             padding: 80px 20px 60px;
@@ -31,16 +41,19 @@
             position: relative;
             overflow: hidden;
         }
+
         .hero::before {
             content: '';
             position: absolute;
             top: -50%;
             left: 50%;
             transform: translateX(-50%);
-            width: 600px; height: 600px;
-            background: radial-gradient(circle, rgba(0,255,136,0.08) 0%, transparent 70%);
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(0, 255, 136, 0.08) 0%, transparent 70%);
             border-radius: 50%;
         }
+
         .hero h1 {
             font-family: 'Bebas Neue', sans-serif;
             font-size: 3.5rem;
@@ -50,6 +63,7 @@
             -webkit-text-fill-color: transparent;
             position: relative;
         }
+
         .hero p {
             color: var(--muted);
             font-size: 1.1rem;
@@ -58,10 +72,11 @@
             margin-left: auto;
             margin-right: auto;
         }
+
         .badge {
             display: inline-block;
-            background: rgba(0,255,136,0.1);
-            border: 1px solid rgba(0,255,136,0.3);
+            background: rgba(0, 255, 136, 0.1);
+            border: 1px solid rgba(0, 255, 136, 0.3);
             color: var(--primary);
             padding: 6px 16px;
             border-radius: 20px;
@@ -69,6 +84,7 @@
             font-weight: 600;
             margin-bottom: 20px;
         }
+
         .streamers {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
@@ -77,6 +93,7 @@
             margin: 40px auto 0;
             padding: 0 20px;
         }
+
         .streamer-card {
             background: var(--surface);
             border: 1px solid var(--border);
@@ -85,20 +102,24 @@
             text-align: center;
             transition: all 0.3s ease;
         }
+
         .streamer-card:hover {
             border-color: var(--primary);
             transform: translateY(-2px);
-            box-shadow: 0 4px 20px rgba(0,255,136,0.1);
+            box-shadow: 0 4px 20px rgba(0, 255, 136, 0.1);
         }
+
         .streamer-card .name {
             font-weight: 700;
             font-size: 0.85rem;
         }
+
         .streamer-card .tag {
             color: var(--muted);
             font-size: 0.75rem;
             margin-top: 4px;
         }
+
         .features {
             max-width: 800px;
             margin: 60px auto;
@@ -107,15 +128,30 @@
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: 20px;
         }
+
         .feature {
             background: var(--surface);
             border: 1px solid var(--border);
             border-radius: 16px;
             padding: 24px;
         }
-        .feature .icon { font-size: 2rem; margin-bottom: 12px; }
-        .feature h3 { font-size: 1rem; margin-bottom: 8px; }
-        .feature p { color: var(--muted); font-size: 0.85rem; line-height: 1.5; }
+
+        .feature .icon {
+            font-size: 2rem;
+            margin-bottom: 12px;
+        }
+
+        .feature h3 {
+            font-size: 1rem;
+            margin-bottom: 8px;
+        }
+
+        .feature p {
+            color: var(--muted);
+            font-size: 0.85rem;
+            line-height: 1.5;
+        }
+
         .footer {
             text-align: center;
             padding: 40px 20px;
@@ -123,32 +159,68 @@
             color: var(--muted);
             font-size: 0.8rem;
         }
+
         .footer a {
             color: var(--primary);
             text-decoration: none;
             margin: 0 12px;
         }
-        .footer a:hover { text-decoration: underline; }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
+
 <body>
     <div class="hero">
         <div class="badge">🇵🇪 KICK PERU</div>
         <h1>KICK PERU CONTENT HUB</h1>
-        <p>Plataforma de automatización de contenido para los mejores streamers de Kick Perú. Distribución automática a YouTube, TikTok, Instagram y Facebook.</p>
+        <p>Plataforma de automatización de contenido para los mejores streamers de Kick Perú. Distribución automática a
+            YouTube, TikTok, Instagram y Facebook.</p>
     </div>
 
     <div class="streamers">
-        <div class="streamer-card"><div class="name">MATTHEWDOTA</div><div class="tag">Dota 2 · CS2</div></div>
-        <div class="streamer-card"><div class="name">ZULLY</div><div class="tag">Gaming Variado</div></div>
-        <div class="streamer-card"><div class="name">MACARIOS</div><div class="tag">Gaming</div></div>
-        <div class="streamer-card"><div class="name">CRISTORATA</div><div class="tag">Dota 2</div></div>
-        <div class="streamer-card"><div class="name">SACHA UZUMAKI</div><div class="tag">IRL · Reacciones</div></div>
-        <div class="streamer-card"><div class="name">GLOGLOKING</div><div class="tag">Dota 2 · IRL</div></div>
-        <div class="streamer-card"><div class="name">KINTEKA</div><div class="tag">Dota 2</div></div>
-        <div class="streamer-card"><div class="name">FRANCO VIDAL</div><div class="tag">IRL · Comunidad</div></div>
-        <div class="streamer-card"><div class="name">SIDERAL</div><div class="tag">Dota 2</div></div>
-        <div class="streamer-card"><div class="name">CAÑITA</div><div class="tag">TikTok · IRL</div></div>
+        <div class="streamer-card">
+            <div class="name">MATTHEWDOTA</div>
+            <div class="tag">Dota 2 · CS2</div>
+        </div>
+        <div class="streamer-card">
+            <div class="name">ZULLY</div>
+            <div class="tag">Gaming Variado</div>
+        </div>
+        <div class="streamer-card">
+            <div class="name">MACARIOS</div>
+            <div class="tag">Gaming</div>
+        </div>
+        <div class="streamer-card">
+            <div class="name">CRISTORATA</div>
+            <div class="tag">Dota 2</div>
+        </div>
+        <div class="streamer-card">
+            <div class="name">SACHA UZUMAKI</div>
+            <div class="tag">IRL · Reacciones</div>
+        </div>
+        <div class="streamer-card">
+            <div class="name">GLOGLOKING</div>
+            <div class="tag">Dota 2 · IRL</div>
+        </div>
+        <div class="streamer-card">
+            <div class="name">KINTEKA</div>
+            <div class="tag">Dota 2</div>
+        </div>
+        <div class="streamer-card">
+            <div class="name">FRANCO VIDAL</div>
+            <div class="tag">IRL · Comunidad</div>
+        </div>
+        <div class="streamer-card">
+            <div class="name">SIDERAL</div>
+            <div class="tag">Dota 2</div>
+        </div>
+        <div class="streamer-card">
+            <div class="name">CAÑITA</div>
+            <div class="tag">TikTok · IRL</div>
+        </div>
     </div>
 
     <div class="features">
@@ -172,9 +244,10 @@
     <div class="footer">
         <p>© 2026 Kick Peru Content Hub. Todos los derechos reservados.</p>
         <p style="margin-top: 12px;">
-            <a href="/privacy">Política de Privacidad</a>
-            <a href="/terms">Términos de Servicio</a>
+            <a href="privacy.html">Política de Privacidad</a>
+            <a href="terms.html">Términos de Servicio</a>
         </p>
     </div>
 </body>
+
 </html>
